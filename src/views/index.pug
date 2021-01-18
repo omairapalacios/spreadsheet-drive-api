@@ -1,0 +1,26 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title GoogleSheets
+  body
+    h3 COLABORADORES
+    hr
+    br
+    table(style='width:50%;text-align:center' border='1')
+      thead
+        tr(style='background:aliceblue')
+          th N°
+          th DNI
+          th APELLIDOS Y NOMBRES
+          th CORREO
+          th LINK
+      tbody
+        each log, index in logs
+          tr
+            td #{index + 1}
+            td #{log['DNI']}
+            td #{log['APELLIDOS Y NOMBRES']}
+            td #{log['CORREO ELECTRÓNICO TRABAJADOR']}
+            td 
+              a(href="#{log['LINK FOTO DNI HIJO Ó HIJA']}") link
